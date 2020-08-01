@@ -1,7 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class="container">
+  <nav class="navbar navbar-light bg-light">
+    <nav class="nav">
+      <a class="nav-link" [routerLink]="[ 'list' ]" routerLinkActive="active">List</a>
+      <a class="nav-link" [routerLink]="[ 'create' ]" routerLinkActive="active">Create</a>
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </nav>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
